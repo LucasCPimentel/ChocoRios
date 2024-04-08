@@ -16,11 +16,11 @@ body {
     border: 2px solid #212121; /* Ajustando a cor da borda */
     border-radius: 10px; /* Borda arredondada */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ajustando o tamanho e a opacidade da sombra */
-    transition: .4s ease-in-out;
+    color: white;
 }
 
 .container:hover {
-  transform: scale(1.05);
+
   border: 1px solid black;
 
 }
@@ -55,6 +55,7 @@ label {
     font-size: 16px;
     border-radius: 5px;
     color: #171717;
+    color: white;
 }
 
 .btn {

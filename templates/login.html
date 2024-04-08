@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='auth_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="post" action="{{ url_for('login') }}" class="login-form"> <!-- Adicionado o atributo action e a classe login-form -->
+            <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" class="input-field">
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label><br>
+                <input type="password" id="password" name="password" class="input-field">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <p>Ainda não tem uma conta? <a href="{{ url_for('register') }}">Cadastre-se aqui</a></p>
+    </div>
+</body>
+</html>

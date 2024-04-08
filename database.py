@@ -62,8 +62,7 @@ def fetch_products():
     conn.close()
     return products
 
-#
-
 
 # Chamada da função create_table() para garantir que a tabela seja criada
 create_table()
+

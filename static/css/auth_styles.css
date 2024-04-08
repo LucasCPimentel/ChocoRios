@@ -1,81 +1,103 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
-    background: #2f3542;
+    background: #212121;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; /* Removendo margem padrão do body */
+    padding: 0; /* Removendo padding padrão do body */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #171717;
+    border-radius: 20px; /* Aumentando o raio da borda */
+    border: 2px solid #212121; /* Ajustando a cor da borda */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ajustando o tamanho e a opacidade da sombra */
+    transition: .4s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  border: 1px solid black;
+
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Aumentando a margem inferior do título */
+    color: #fff; /* Mudando a cor do título */
 }
 
 .alert {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    padding: 15px; /* Aumentando o preenchimento do alerta */
+    margin-bottom: 20px; /* Aumentando a margem inferior do alerta */
+    border-radius: 10px; /* Aumentando o raio da borda do alerta */
 }
 
 .alert-success {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
+    background-color: #27ae60; /* Alterando a cor de fundo do alerta de sucesso */
+    border-color: #2ecc71; /* Alterando a cor da borda do alerta de sucesso */
+    color: #fff; /* Alterando a cor do texto do alerta de sucesso */
 }
 
 .alert-danger {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
+    background-color: #c0392b; /* Alterando a cor de fundo do alerta de perigo */
+    border-color: #e74c3c; /* Alterando a cor da borda do alerta de perigo */
+    color: #fff; /* Alterando a cor do texto do alerta de perigo */
 }
 
 /* Formulário */
 form {
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Aumentando a margem inferior do formulário */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Ajustando a margem inferior do label */
+    color: #fff; /* Alterando a cor do texto do label */
 }
 
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
+    color: white;
+    width: calc(100% - 22px); /* Ajustando a largura do input */
+    padding: 12px; /* Aumentando o preenchimento do input */
+    margin-bottom: 20px; /* Aumentando a margem inferior do input */
+    border: none; /* Removendo a borda do input */
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    outline: none;
+    background: none;
+    background-color:#171717
+
+
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Aumentando o preenchimento do botão */
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
+    border-radius: 10px; /* Aumentando o raio da borda do botão */
+    background-color: #e74c3c; /* Alterando a cor de fundo do botão */
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9; /* Alterando a cor de fundo ao passar o mouse sobre o botão */
 }
 
 p {
     text-align: center;
+    color: #fff; /* Alterando a cor do texto do parágrafo */
 }
 
 p a {
-    color: #007bff;
+    color: #3498db;
 }
 
 p a:hover {

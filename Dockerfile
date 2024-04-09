@@ -1,27 +1,21 @@
-# Use a imagem base do Python
-FROM python:3.9-slim
+# Use the official Python image as the base image
+FROM python:3.8
 
-# Define o diretório de trabalho dentro do contêiner
+# Set the working directory in the container
 WORKDIR /app
 
-# Copie o arquivo de requisitos para o diretório de trabalho
+# Copy the application files into the working directory
 COPY . /app
 
-# Instale as dependências do Python
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copie todos os arquivos do diretório atual para o diretório de trabalho no contêiner
-COPY . .
-
-
-
+# Install the application dependencies
+RUN pip install -r requirements.txt
 
 # Defina as variáveis de ambiente necessárias para o Flask
 ENV FLASK_APP=ChocoRios.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_RUN_PORT=8000
 
-EXPOSE 5000
+EXPOSE 8000
 
-# Comando para iniciar o aplicativo Flask quando o contêiner for iniciado
+# Define the entry point for the container
 CMD ["flask", "run"]

@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copie o arquivo de requisitos para o diretório de trabalho
-COPY requirements.txt requirements.txt
+COPY . /app
 
 # Instale as dependências do Python
 RUN pip install --no-cache-dir -r requirements.txt
@@ -19,6 +19,9 @@ EXPOSE 5000
 # Defina as variáveis de ambiente necessárias para o Flask
 ENV FLASK_APP=ChocoRios.py
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=8000
+
+EXPOSE 8000
 
 # Comando para iniciar o aplicativo Flask quando o contêiner for iniciado
 CMD ["flask", "run"]

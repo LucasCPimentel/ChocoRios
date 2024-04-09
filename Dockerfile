@@ -13,15 +13,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie todos os arquivos do diretório atual para o diretório de trabalho no contêiner
 COPY . .
 
-# Exponha a porta em que o aplicativo Flask está sendo executado
-EXPOSE 5000
+
+
 
 # Defina as variáveis de ambiente necessárias para o Flask
 ENV FLASK_APP=ChocoRios.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_RUN_PORT=8000
 
-EXPOSE 8000
+EXPOSE 5000
 
 # Comando para iniciar o aplicativo Flask quando o contêiner for iniciado
 CMD ["flask", "run"]
